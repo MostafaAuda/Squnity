@@ -14,7 +14,7 @@ const gulp = require('gulp'),
       sass.compiler = require('node-sass');
 
 function clear(cb) {
-  return gulp.src('dist/', {read: false, allowEmpty: true})
+  return gulp.src('Squinty/', {read: false, allowEmpty: true})
   .pipe(clean())
   cb();
 }
@@ -25,7 +25,7 @@ function css(cb) {
   .pipe(autoprefixer('last 2 version'))
   .pipe(concat('main.css'))
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('Squinty/css'))
   .pipe(browserSync.stream());
   cb();
 }
@@ -35,12 +35,12 @@ function js(cb) {
   .pipe(concat('main.js')) 
   .pipe(terser({mangle: {toplevel: true}}))
   .on('error', function (error) {this.emit('end')})  
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest('Squinty/js'));
   cb();
 }
 
 function cleanassets(cb) {
-  return gulp.src('dist/assets', {read: false, allowEmpty: true})
+  return gulp.src('Squinty/assets', {read: false, allowEmpty: true})
   .pipe(clean())
   cb();
 }
@@ -56,20 +56,20 @@ function images(cb) {
     imagemin(),
     { name: 'images' }
   ))
-  .pipe(gulp.dest('dist/assets'));
+  .pipe(gulp.dest('Squinty/assets'));
   cb();
 }
 
 function pages(cb) {
   return gulp.src('app/*.html')
-  .pipe(gulp.dest('dist/'));
+  .pipe(gulp.dest('Squinty/'));
   cb();
 }
 
 function watch(cb) {
   browserSync.init({
     server: {
-        baseDir: "dist/"
+        baseDir: "Squinty/"
     }
   });;
 
