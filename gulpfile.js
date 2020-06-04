@@ -22,8 +22,8 @@ function clear(cb) {
 function css(cb) {
   return gulp.src('app/css/scss/*.scss')
   .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer('last 2 version'))
   .pipe(concat('main.css'))
+  .pipe(autoprefixer('last 2 version'))
   .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(gulp.dest('Squnity/css'))
   .pipe(browserSync.stream());
@@ -66,7 +66,7 @@ function pages(cb) {
   cb();
 }
 
-function watch(cb) {
+function watch(cb) {   
   browserSync.init({
     server: {
         baseDir: "Squnity/"
