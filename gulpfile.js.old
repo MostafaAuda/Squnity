@@ -14,18 +14,18 @@ const gulp = require('gulp'),
       sass.compiler = require('node-sass');
 
 function clear(cb) {
-  return gulp.src('dist/', {read: false, allowEmpty: true})
+  return gulp.src('Squnity/', {read: false, allowEmpty: true})
   .pipe(clean())
   cb();
 }
 
 function css(cb) {
-  return gulp.src('app/css/*.scss')
+  return gulp.src('app/css/scss/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(concat('main.css'))
   .pipe(autoprefixer('last 2 version'))
   .pipe(cleanCSS({compatibility: 'ie8'}))
-  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('Squnity/css'))
   .pipe(browserSync.stream());
   cb();
 }
@@ -35,12 +35,12 @@ function js(cb) {
   .pipe(concat('main.js')) 
   .pipe(terser({mangle: {toplevel: true}}))
   .on('error', function (error) {this.emit('end')})  
-  .pipe(gulp.dest('dist/js'));
+  .pipe(gulp.dest('Squnity/js'));
   cb();
 }
 
 function cleanassets(cb) {
-  return gulp.src('dist/assets', {read: false, allowEmpty: true})
+  return gulp.src('Squnity/assets', {read: false, allowEmpty: true})
   .pipe(clean())
   cb();
 }
@@ -56,26 +56,26 @@ function images(cb) {
     imagemin(),
     { name: 'images' }
   ))
-  .pipe(gulp.dest('dist/assets'));
+  .pipe(gulp.dest('Squnity/assets'));
   cb();
 }
 
 function pages(cb) {
   return gulp.src('app/*.html')
-  .pipe(gulp.dest('dist/'));
+  .pipe(gulp.dest('Squnity/'));
   cb();
 }
 
 function watch(cb) {   
   browserSync.init({
     server: {
-        baseDir: "dist/"
+        baseDir: "Squnity/"
     }
   });;
 
   // Watched files paths
-  gulp.watch('app/css/*.scss', css);
-  gulp.watch('app/js/*.js', js).on('change', browserSync.reload);
+  gulp.watch('app/css/scss/*.scss', css);
+  gulp.watch('app/js/**', js).on('change', browserSync.reload);
   gulp.watch('app/assets/**/*', gulp.series(cleanassets, images));
   gulp.watch('app/*.html', pages).on('change', browserSync.reload);
   cb();
@@ -90,8 +90,6 @@ exports.pages = pages;
 exports.watch = watch;
 
 exports.default = series(clear, parallel(css, js, images, pages), watch);
-
-exports.build = series(clear, parallel(css, js, images, pages));
 
 
 
