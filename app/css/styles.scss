@@ -35,149 +35,230 @@ html, body {
 }
 
 $red: #c42334;
+$lightred: #cc2334;
 $petrol: 	#0c2c34;
-$petrol-dark: #0c2834;
+$blue: #0c2434;
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
 //NavBar Styles
-.navbar-brand {
-  img {
-    width: auto;
-    height: 50px;
+nav {
+  .navbar-brand {
+    img {
+      width: auto;
+      height: 50px;
+    }
   }
-}
+  
+  .icon-bar {
+    width: 25px;
+    height: 2px;
+    background-color: $red;
+    display: block;
+    transition: all 0.3s;
+    margin-bottom: 5px;
+  }
+   
+  .navbar-toggler {
+    border: none;
+    background: transparent !important;
+  }
+  
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+   
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+  }
+   
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+   
+  .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+  }
+   
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+  }
+   
+  .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+  }
+  
+  .nav-item {
+    padding: 7px 0;
+  }
+  
+  .nav-link {
+    text-align: center;
+    padding: 0 15px!important;
+    color: $blue!important;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: $red!important;
+  }
+  
+  .nav-link:active {
+    color: $red!important;
+  }
 
-.icon-bar {
-	width: 25px;
-  height: 2px;
-  background-color: $red;
-  display: block;
-  transition: all 0.3s;
-  margin-bottom: 5px;
+  .dropdown-toggle::after {
+    vertical-align: 1px;
 }
- 
-.navbar-toggler {
-  border: none;
-  background: transparent !important;
-}
-
-.navbar-toggler .top-bar {
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-}
- 
-.navbar-toggler .middle-bar {
-  opacity: 0;
-}
- 
-.navbar-toggler .bottom-bar {
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-}
- 
-.navbar-toggler.collapsed .top-bar {
-  transform: rotate(0);
-}
- 
-.navbar-toggler.collapsed .middle-bar {
-  opacity: 1;
-}
- 
-.navbar-toggler.collapsed .bottom-bar {
-  transform: rotate(0);
-}
-
-.nav-item {
-  padding: 7px 0;
-}
-
-.nav-link {
-  text-align: center;
-  padding: 0 15px!important;
-  color: $petrol!important;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: $red!important;
-}
-
-.nav-link:active {
-  color: $red!important;
-}
-
-.sq-btn {
-  color: $red!important;
-  border-color: $red!important;
-  border-radius: 7px!important;
-  margin: auto;
-}
-
-.sq-btn:hover {
-  background-color: $red!important;
-  color: white!important;
-  border-color: $red!important;
-}
-
-.dropdown-menu {
-  border: none!important;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.show > .dropdown-menu {
-  visibility: visible;
-  opacity: 1;
-}
-
-.active {
-  color: $red!important;
-}
-
-@media only screen and (min-width: 1025px) {
+  
+  .sq-btn {
+    border-color: $red!important;
+    border-radius: 7px!important;
+    margin: auto;
+    background-color: $red!important;
+    color: #fff;
+  }
+  
+  .sq-btn:hover {
+    box-shadow: 0px 0px 6px 0px $red;
+  }
+  
   .dropdown-menu {
-    display: block!important;
     border: none!important;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  }
-
-  .dropdown:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform:translateY(30px);
   }
   
   .show > .dropdown-menu {
     visibility: visible;
     opacity: 1;
-    transform:translateY(30px);
   }
-}
-
-@media only screen and (max-width: 1024px) {
-  .sq-btn {
-    margin: 7px auto;
+  
+  .active {
+    color: $red!important;
   }
-}
-
-@media only screen and (max-width: 767px) {
-  .navbar-brand {
-
-    img {
-      height: 35px;
+  
+  @media only screen and (min-width: 1025px) {
+    .dropdown-menu {
+      display: block!important;
+      border: none!important;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transform:translateY(30px);
+    }
+    
+    .show > .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transform:translateY(30px);
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .sq-btn {
+      margin: 7px auto;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .navbar-brand {
+  
+      img {
+        height: 35px;
+      }
     }
   }
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+//Header Styles
+header {
 
+  width: 100%;
+  height: calc(100vh - 76px);
+  position: relative;
+  overflow: hidden;
+
+  .header__text--title {
+    color: $red;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.5);
+    margin-bottom: 16px;
+    font-size: 32px;
+    // margin-top: 90px;
+  }
+
+  .header__text--content {
+    color: $blue;
+    font-size: 22px;
+  }
+
+  #header__text--typing {
+    font-weight: bold;
+    color: $red;
+  }
+
+  .header__figure {
+    position: relative;
+  }
+
+  .figure-image {
+    position: absolute;
+    width: 95%;
+    height: auto;
+  }
+
+  .fill-primary {
+    fill: $red;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    
+    height: auto;
+
+    .header__text {
+      margin-top: 35px;
+    }
+
+    .header__figure {
+      display: none;
+      visibility: hidden;
+    }
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+
+    .header__text--title {
+      font-size: 24px;
+    }
+  
+    .header__text--content {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .header__text--content {
+      font-size: 12px;
+    }
+  }
+
+}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Media Queries for RTL - LTR */
@@ -187,6 +268,10 @@ $petrol-dark: #0c2834;
 }
 
 @media only screen and (max-width: 767px) {
+
+}
+
+@media only screen and (max-width: 320px) {
 
 }
 
