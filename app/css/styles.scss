@@ -91,7 +91,7 @@ nav {
   }
   
   .nav-item {
-    padding: 7px 0;
+    padding: 17px 0;
   }
   
   .nav-link {
@@ -112,7 +112,7 @@ nav {
   }
 
   .dropdown-toggle::after {
-    vertical-align: 1px;
+    vertical-align: 0.2;
 }
   
   .sq-btn {
@@ -132,13 +132,61 @@ nav {
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    border-radius: unset;
   }
   
   .show > .dropdown-menu {
     visibility: visible;
     opacity: 1;
   }
-  
+
+  .service-container {
+    padding: 20px 0;
+    border-bottom: 1px solid #e7eaf3;
+    position: relative;
+    cursor: pointer;
+    word-break: break-word;
+  }
+
+  .right-border::after {
+    content: "";
+    right: -25px;
+    width: 1px;
+    height: 80%;
+    position: absolute;
+    background-color: #e7eaf3;
+  }
+
+  .service-icon {
+    font-size: 40px;
+    color: $red;
+    margin-inline-end: 15px;
+  }
+
+  .service-title {
+    color: $blue;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .service-container:hover .service-title {
+    color: $red;
+    text-decoration: unset;
+  }
+
+  .service-desc {
+    margin: 0; 
+    color: #77838f;
+    font-size: 16px;
+  }
+
+  .service-padding {
+    padding: 0 25px;
+  }
+
   .active {
     color: $red!important;
   }
@@ -146,29 +194,35 @@ nav {
   @media only screen and (min-width: 1025px) {
     .dropdown-menu {
       display: block!important;
-      border: none!important;
       visibility: hidden;
       opacity: 0;
       transition: all 0.3s ease-in-out;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      border-top: 2px solid $red!important;
+      transform: translateX(-585px);
+      min-width: 900px;
     }
   
     .dropdown:hover .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform:translateY(30px);
+      transform: translate(-585px,10px);
     }
     
     .show > .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform:translateY(30px);
+      transform: translate(-585px,10px);
     }
   }
   
   @media only screen and (max-width: 1024px) {
     .sq-btn {
       margin: 7px auto;
+    }
+
+    .nav-item {
+      padding: 7px 0;
     }
   }
   
@@ -178,6 +232,22 @@ nav {
       img {
         height: 35px;
       }
+    }
+
+    .right-border::after {
+      display: none;
+    }
+
+    .service-icon {
+      font-size: 28px;
+    }
+
+    .service-title {
+      font-size: 14px;
+    }
+
+    .service-desc {
+      font-size: 12px;
     }
   }
 }
