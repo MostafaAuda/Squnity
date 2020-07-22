@@ -330,19 +330,26 @@ header {
     }
   
     .header__text--content {
-      font-size: 14px;
+      font-size: 16px;
+    }
+
+    #header__text--typing {
+      display: flex;
+    }
+
+    br {
+      display: none;
     }
   }
 
   @media only screen and (max-width: 320px) {
-    .header__text--content {
-      font-size: 12px;
-    }
+
   }
 
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//About-US Styles
 
 .about-us {
   position: relative;
@@ -389,7 +396,110 @@ header {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//Speciality Styles
 
+.speciality {
+  position: relative;
+  overflow: hidden;
+
+  .speciality__title--firstly {
+    margin: auto;
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-radius: 6.1875rem;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: fit-content;
+  }
+
+  .speciality__title--secondary {
+    text-align: center;
+    color: $petrol;
+    font-size: 42px;
+    margin-bottom: 60px;
+  }
+
+  .speciality__figure {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: auto;
+    margin-bottom: 10px;
+
+    .icon-7-0{fill:none;stroke:#FFFFFF;}
+    .icon-7-1{fill:#BDC5D1;}
+    .icon-7-2{fill:$red;}
+    .icon-7-3{fill:none;stroke:#BDC5D1;}
+    .icon-7-4{fill:none;stroke:$red;}
+
+    .icon-6-0{fill:none;stroke:$red;}
+    .icon-6-1{fill:none;stroke:#BDC5D1;}
+    .icon-6-2{fill:none;stroke:#FFFFFF;}
+    .icon-6-3{fill:#BDC5D1;}
+    .icon-6-4{fill:$red;}
+
+    .icon-42-0{fill:#BDC5D1;}
+    .icon-42-1{fill:none;stroke:$red;}
+    .icon-42-2{fill:none;stroke:#BDC5D1;}
+    .icon-42-3{fill:$red;}
+  }
+
+  .speciality__title {
+    text-align: center;
+    color: $petrol;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .speciality__content {
+    text-align: center;
+    color: $petrol;
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+  
+    .speciality__title--firstly {
+      font-size: 14px;
+    }
+  
+    .speciality__title--secondary {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .speciality__figure {
+      width: 66px;
+      height: 66px;
+      margin-bottom: 10px;
+    }
+
+    .speciality__title {
+      font-size: 20px;
+    }
+  
+    .speciality__content {
+      font-size: 16px;
+    }
+
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+  }
+
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 
 
