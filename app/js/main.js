@@ -28,3 +28,35 @@ $(document).ready(function() {
     .deleteAll()
     .start();
 });
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+$(document).ready(function() {
+
+  // When the user scrolls down 20px from the top of the document, slide down the navbar
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+
+    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+
+      document.getElementById("mainNav").style.transform = "translate3d(0, -100%, 0)";
+
+      if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+
+        document.getElementById("mainNav").style.position = "sticky";
+        document.getElementById("mainNav").style.top = "0";
+        document.getElementById("mainNav").style.zIndex = "1024";
+        document.getElementById("mainNav").style.transform = "unset";
+      }
+
+    } else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
+
+      document.getElementById("mainNav").style.transform = "unset";
+
+    }
+  }
+
+});
+
+/*--------------------------------------------------------------------------------------------------------------------*/

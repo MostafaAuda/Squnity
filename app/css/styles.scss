@@ -22,6 +22,8 @@
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Main Style */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
 $red: #c42334;
 $lightred: #c93848;
 $petrol: 	#0c2c34;
@@ -33,11 +35,12 @@ $lighterblue: #3c4f5c;
 
 html, body {
     outline: none;
-    font-family: 'Source Sans Pro', sans-serif!important;
+    font-family: 'Poppins', sans-serif!important;
     font-size: 18px;
     padding: 0;
     margin: 0;
     color: $lighterblue;
+    font-weight: 400;
 }
 
 *:focus {
@@ -48,10 +51,21 @@ html, body {
   padding: 60px 0;
 }
 
+.font-weight-bold {
+  font-weight: 600!important;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 //NavBar Styles
 
+#mainNav {
+  transition: 0.5s ease;
+}
+
 nav {
+
+  background: white;
+
   .navbar-brand {
     img {
       width: auto;
@@ -107,9 +121,9 @@ nav {
     text-align: center;
     padding: 0 15px!important;
     color: $lighterblue!important;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
     transition: color 0.3s;
+    font-weight: 500;
   }
   
   .nav-link:hover {
@@ -130,6 +144,7 @@ nav {
     margin: auto;
     background-color: $red!important;
     color: #fff;
+    font-size: 16px;
   }
   
   .sq-btn:hover {
@@ -175,9 +190,9 @@ nav {
   }
 
   .service-title {
-    color: $lighterblue;
-    font-size: 18px;
-    font-weight: bold;
+    color: $lighterpetrol;
+    font-size: 16px;
+    font-weight: 500;
     transition: color 0.3s;
   }
 
@@ -215,13 +230,13 @@ nav {
     .dropdown:hover .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-585px,10px);
+      transform: translate(-585px);
     }
     
     .show > .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-585px,10px);
+      transform: translate(-585px);
     }
   }
   
@@ -250,6 +265,14 @@ nav {
       }
     }
 
+    .nav-link {
+      font-size: 14px;
+    }
+
+    .sq-btn {
+      font-size: 14px;
+    }
+    
     .right-border::after {
       display: none;
     }
@@ -263,7 +286,7 @@ nav {
     }
 
     .service-desc {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
@@ -280,24 +303,32 @@ header {
 
   .header__text--title {
     color: $red;
-    font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 5px;
     font-size: 68px;
   }
 
   .header__text--content {
-    color: $lighterblue;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #header__text--typing {
-    font-weight: bold;
     color: $red;
   }
 
   .header__figure {
     position: relative;
+  }
+
+  .header-svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    z-index: -1;
   }
 
   .figure-image {
@@ -336,7 +367,7 @@ header {
     }
   
     .header__text--content {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     #header__text--typing {
@@ -366,10 +397,10 @@ header {
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-size: 32px;
+    font-weight: 400;
   }
 
-  .about-us__content {
-    color: $lighterblue;
+  .about-us__content {    
     font-size: 18px;
     margin: 0;
   }
@@ -391,7 +422,7 @@ header {
     }
 
     .about-us__content {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 
@@ -414,18 +445,20 @@ header {
     background: rgba(0, 201, 167, 0.1);
     border-radius: 6.1875rem;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     padding: 7px 15px;
     margin-bottom: 15px;
     display: block;
     width: fit-content;
+    font-weight: 400;
   }
 
   .speciality__title--secondary {
     text-align: center;
-    color: $lighterblue;
-    font-size: 40px;
+    font-size: 28px;
     margin-bottom: 50px;
+    line-height: 1.5;
+    font-weight: 400;
   }
 
   .speciality__figure {
@@ -454,18 +487,16 @@ header {
   }
 
   .speciality__title {
-    text-align: center;
-    color: $lighterblue;
-    font-weight: bold;
-    font-size: 24px;
+    text-align: center;    
+    font-weight: 500;
+    font-size: 20px;
     letter-spacing: 1px;
     margin-bottom: 10px;
   }
 
   .speciality__content {
-    text-align: center;
-    color: $lighterblue;
-    font-size: 18px;
+    text-align: center;   
+    font-size: 16px;
     margin-bottom: 0;
   }
 
@@ -476,11 +507,11 @@ header {
   @media only screen and (max-width: 767px) {
   
     .speciality__title--firstly {
-      font-size: 14px;
+      font-size: 12px;
     }
   
     .speciality__title--secondary {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 30px;
     }
 
@@ -491,11 +522,11 @@ header {
     }
 
     .speciality__title {
-      font-size: 20px;
+      font-size: 18px;
     }
   
     .speciality__content {
-      font-size: 16px;
+      font-size: 14px;
     }
 
   }
@@ -514,30 +545,36 @@ header {
   position: relative;
   overflow: hidden;
 
-  .importance__question {
-    color: $lighterblue;
+  .importance__question {   
     text-align: center;
     font-size: 28px;
     margin-bottom: 10px;
+    font-weight: 400;
   }
 
   .importance__answer {
-    color: $lighterblue;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0;
   }
 
   .importance__title {
     color: $red;
-    font-size: 32px;
+    font-size: 20px;
     margin-bottom: 10px;
+    font-weight: 500;
   }
 
-  .importance__content {
-    color: $lighterblue;
-    font-size: 18px;
+  .importance__content { 
+    font-size: 16px;
     margin-bottom: 0;
+  }
+
+  .importance__note {
+    font-size: 14px;  
+    text-align: center;  
+    margin-bottom: 0;
+    margin-top: 15px;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -547,19 +584,19 @@ header {
   @media only screen and (max-width: 767px) {
 
     .importance__question {
-      font-size: 24px;
+      font-size: 20px;
     }
   
     .importance__answer {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .importance__title {
-      font-size: 22px;
+      font-size: 18px;
     }
   
     .importance__content {
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: 1rem;
     }
     
@@ -571,6 +608,10 @@ header {
       order: unset;
 
     }
+
+    .importance__note {
+      font-size: 12px;  
+    }
   }
 
   @media only screen and (max-width: 320px) {
@@ -580,6 +621,60 @@ header {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//Our Services Styles
+
+.services {
+
+  position: relative;
+  overflow: hidden;
+
+  .services__title--firstly {
+    margin: auto;
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-radius: 6.1875rem;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: fit-content;
+    font-weight: 400;
+  }
+
+  .services__title--secondary {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .services__title--firstly {
+      font-size: 12px;
+    }
+  
+    .services__title--secondary {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+
+  }
+
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
 
 /* Media Queries for RTL - LTR */
 
