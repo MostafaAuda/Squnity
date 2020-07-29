@@ -59,7 +59,7 @@ html, body {
 //NavBar Styles
 
 #mainNav {
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 nav {
@@ -184,9 +184,9 @@ nav {
   }
 
   .service-icon {
-    font-size: 40px;
-    color: $red;
-    margin-inline-end: 15px;
+    width: 70px;
+    height: 70px;
+    margin-inline-end: 10px;
   }
 
   .service-title {
@@ -251,6 +251,7 @@ nav {
   }
   
   @media only screen and (max-width: 767px) {
+
     .navbar-toggler {
       margin-right: 3px;
       margin-top: 5px;
@@ -278,7 +279,8 @@ nav {
     }
 
     .service-icon {
-      font-size: 28px;
+      width: 55px;
+      height: 55px;
     }
 
     .service-title {
@@ -657,7 +659,7 @@ header {
     color: $red;
     margin-bottom: 20px;
     font-weight: 600;
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .service__title--color {
@@ -678,20 +680,23 @@ header {
     font-weight: 600;
     padding: 10px 0;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all 0.3s;
     font-size: 18px;
   }
+
+  .right-arrow {
+    transition: transform 0.3s;
+  }
   
-  .services__service:hover .service__info{
+  .services__service:hover .service__info {
     padding: 15px 0;
     box-shadow: 0 .125rem .25rem $red;
   }
     
-  .services__service:hover .service__info{
-    padding: 15px 0;
-    box-shadow: 0 .125rem .25rem $red;
+  .services__service:hover .right-arrow {
+    transform: translateX(10px);
   }
-  
+
   @media only screen and (max-width: 1024px) {
 
     .services__service {
@@ -710,7 +715,7 @@ header {
     }
   
     .services__title--secondary {
-      font-size: 20px;
+      font-size: 14px;
       margin-bottom: 30px;
     }
 
@@ -748,6 +753,122 @@ header {
 
   }
 
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+//Acknowledgments Styles
+
+.acknowledgment {
+
+  position: relative;
+  overflow: hidden;
+
+  .acknowledgment__title--firstly {
+    margin: auto;
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-radius: 6.1875rem;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: fit-content;
+    font-weight: 400;
+  }
+
+  .acknowledgment__title--secondary {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 65px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .acknowledgment__logo {
+    filter: grayscale(100%);
+    transition: all linear .3s;
+    width: 100%;
+    height: 60px;
+  }
+
+  .acknowledgment__logo:hover {
+    filter: none;
+  }
+
+  .owl-nav {
+    margin-bottom: 30px;
+  }
+
+  .owl-prev, .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;  
+    font-size: 45px!important;
+  }
+
+  .owl-prev {
+    left: 15px;
+  }
+
+  .owl-next {
+    right: 15px;
+  }
+
+  .owl-theme .owl-nav [class*=owl-] {
+    margin: 0;
+    color: $red;
+    border: none!important;
+    transition: font-size 0.3s;
+  }
+
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent;
+    outline: unset;
+    font-size: 55px!important;
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $red;
+  } 
+
+  @media only screen and (max-width: 1024px) {
+
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .acknowledgment__title--firstly {
+      font-size: 12px;
+    }
+  
+    .acknowledgment__title--secondary {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .acknowledgment__logo {
+      height: 30px;
+    }
+
+    .owl-nav {
+      margin-bottom: 15px;
+    }
+
+    .owl-prev, .owl-next {
+      font-size: 40px!important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      width: 7px;
+      height: 7px;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+
+  }
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
