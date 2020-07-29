@@ -827,6 +827,10 @@ header {
     outline: unset;
     font-size: 55px!important;
   }
+
+  .owl-theme .owl-nav [class*=owl-]:focus {
+    outline: unset;
+  }
   
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: $red;
