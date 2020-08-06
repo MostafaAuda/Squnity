@@ -59,6 +59,10 @@ html, body {
   color: $red!important;
 }
 
+a {
+  color: $lighterblue;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 //NavBar Styles
 
@@ -146,8 +150,12 @@ nav {
     border-color: $red!important;
     margin: auto;
     background-color: $red!important;
-    color: #fff;
     font-size: 16px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }
   
   .sq-btn:hover {
@@ -895,6 +903,8 @@ header {
 
     padding: 12px;
     margin-bottom: 60px;
+    text-align: center;
+    width: fit-content;
 
     .contact-us__title--red {
       background-color: $red;
@@ -1087,7 +1097,150 @@ header {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//Footer Styles
+footer {
 
+  position: relative;
+  overflow: hidden;
+
+  .upper-footer {
+    padding: 35px 0;
+  }
+
+  .footer__nav {
+
+    margin: 0;
+    padding: 0;
+
+    .footer__nav--item {
+      display: inline;
+      margin-inline-end: 15px;
+      font-size: 16px;
+      transition: color 0.3s;
+      cursor: pointer;
+      font-weight: 500;
+
+      a {
+        transition: color 0.3s;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .footer__social {
+
+    margin: 0;
+    padding: 0;
+
+    .footer__social--item {
+      display: inline;
+      margin-inline-start: 30px;
+      font-size: 20px;
+      transition: color 0.3s;
+      cursor: pointer;
+
+      a {
+        transition: all 0.3s;
+        text-decoration: none;
+        opacity: 0.7;
+      }
+
+      a:hover {
+        color: $red;
+        opacity: 1;
+      }
+
+    }
+  }
+
+  .lower-footer {
+    padding: 35px 0;
+    background-color: $red;
+  }
+
+  .footer_copyrights {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    .footer__social {
+
+      .footer__social--item {
+        font-size: 18px;
+        margin-inline-start: 20px;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+
+    .footer__nav {
+
+      text-align: center;
+
+      .footer__nav--item {
+        margin: 5px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .footer__social {
+
+      text-align: center;
+      margin-top: 15px;
+
+      .footer__social--item {
+        margin: 10px;
+        font-size: 16px;
+      }
+    }
+
+    .footer_copyrights {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+  }
+  
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+//To Top Styles
+
+#back2Top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 10px 15px;
+  opacity: 0.7;
+  background-color: $red;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease-out;
+  display: none;
+  overflow: hidden;
+}
+
+#back2Top:hover {
+  opacity: 1;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 /* Media Queries for RTL - LTR */
 
@@ -1099,6 +1252,14 @@ header {
 
   .section-padding {
     padding: 30px 0;
+  }
+
+  #back2Top {
+    bottom: 10px;
+    right: 10px;
+    padding: 7px 12px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 

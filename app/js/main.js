@@ -1,3 +1,12 @@
+/*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 700) {
+    $('#back2Top').slideDown();
+  } else {
+    $('#back2Top').slideUp();
+  }
+});
+
 $(document).ready(function() {
 
   let app = document.getElementById('header__text--typing');
@@ -57,6 +66,7 @@ $(document).ready(function() {
   }
 
   /*--------------------------------------------------------------------------------------------------------------------*/
+  //Owl carousel
 
   $('.owl-carousel').owlCarousel({
     loop:true,
@@ -76,8 +86,51 @@ $(document).ready(function() {
             items:5
         }
     }
-})
+  })
 
+  /*--------------------------------------------------------------------------------------------------------------------*/
+  //Year Function
+
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("getYear").innerHTML = n;
+  
+  /*--------------------------------------------------------------------------------------------------------------------*/
+  
+  $("#back2Top").click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+  });
+  /*Scroll to top when arrow up clicked END*/
+
+  /*--------------------------------------------------------------------------------------------------------------------*/
+
+  //Scroll to position animation
+  $('a[href*="#"]').on('click', function(e) {
+    e.preventDefault()
+    
+    if (window.innerWidth > 1024) {
+      $('html, body').animate(
+        {
+        scrollTop: $($(this).attr('href')).offset().top - 60,
+        },
+        1000,
+        'linear'
+      )
+    } else {
+      $('html, body').animate(
+        {
+        scrollTop: $($(this).attr('href')).offset().top,
+        },
+        1000,
+        'linear'
+      )
+    }
+
+
+
+  });
 
 });
 

@@ -75,7 +75,7 @@
   <nav class="navbar navbar-expand-xl navbar-shrink sq-main-nav shadow-sm p-0" id="mainNav">
     <div class="container">
 
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo.png" alt="Squnity">
       </a>
             
@@ -92,8 +92,12 @@
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About Us</a>
+          </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Services
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -3182,12 +3186,12 @@
             </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-
           <form class="form-inline">
-            <button class="btn btn-outline-danger sq-btn rounded-pill" type="button">Main button</button>
+            <button class="btn btn-outline-danger sq-btn rounded-pill" type="button">
+              <a href="#contact-us">
+                Contact US
+              </a>
+            </button>
           </form>
         </ul>
 
@@ -4691,7 +4695,7 @@
   <!-- Header -->
 
   <!-- About US -->
-  <section class="about-us w-100 section-padding">
+  <section class="about-us w-100 section-padding" id="about-us">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-7 d-flex align-content-xl-center flex-wrap">
@@ -6724,7 +6728,7 @@
   <!-- Importance -->
 
   <!-- Our services -->
-  <section class="services w-100 section-padding">
+  <section class="services w-100 section-padding" id="services">
     <div class="container">
       <div class="row">
         <div class="col-12 mx-auto">
@@ -11422,14 +11426,16 @@
   <!-- Acknowledgments -->
 
   <!-- Contact US -->
-  <section class="contact-us w-100 section-padding">
+  <section class="contact-us w-100 section-padding" id="contact-us">
     <div class="container">
 
       <div class="row">
-        <div class="contact-us__title mx-auto shadow-sm rounded-pill">
-          <span class="contact-us__title--red rounded-pill">You</span>
-          <span class="contact-us__title--normal">Have a question?. </span>
-          <span class="contact-us__title--normal-red"> Contact us.</span>
+        <div class="col-12">
+          <div class="contact-us__title mx-auto shadow-sm rounded-pill">
+            <span class="contact-us__title--red rounded-pill">You</span>
+            <span class="contact-us__title--normal">Have a question?. </span>
+            <span class="contact-us__title--normal-red"> Contact us.</span>
+          </div>
         </div>
       </div>
 
@@ -12176,6 +12182,82 @@
     </div>
   </section>
   <!-- Contact US -->
+
+  <!-- Footer -->
+  <footer class="w-100">
+    <div class="container">
+
+      <div class="upper-footer">
+        <div class="row">
+          <div class="d-md-flex justify-content-md-between col-12">
+  
+            <ul class="footer__nav">
+              <li class="footer__nav--item">
+                <a href="#">
+                  About
+                </a>
+              </li>
+              <li class="footer__nav--item">
+                <a href="#">
+                  Privacy & policy
+                </a>
+              </li>
+              <li class="footer__nav--item">
+                <a href="#">
+                  Terms & conditions
+                </a>
+              </li>
+            </ul>
+  
+            <ul class="footer__social">
+              <li class="footer__social--item">
+                <a href="">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a href="">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a href="">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a href="">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li class="footer__social--item">
+                <a href="">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lower-footer">
+      <div class="row">
+        <div class="footer_copyrights col-12">
+          © Squnity <span id="getYear"></span>. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- To Top -->
+  <a id="back2Top" title="Back to top" href="#" class="rounded"><i class="fas fa-arrow-up"></i></a>
+  <!-- To Top -->
+
+
 
 
   <!-- Typewriter plugin -->
