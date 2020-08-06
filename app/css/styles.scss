@@ -66,13 +66,15 @@ a {
 /*--------------------------------------------------------------------------------------------------------------------*/
 //NavBar Styles
 
-#mainNav {
-  transition: 0.3s ease;
-}
+// #mainNav {
+//   transition: 0.3s ease;
+// }
 
 nav {
 
   background: white;
+  top: 0;
+  z-index: 100;
 
   .navbar-brand {
     img {

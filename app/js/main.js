@@ -39,31 +39,31 @@ $(document).ready(function() {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-  window.onscroll = function() {scrollFunction()};
+  // window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
+  // function scrollFunction() {
 
-    if (window.innerWidth > 1024) {
+  //   if (window.innerWidth > 1024) {
       
-      if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+  //     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
 
-        document.getElementById("mainNav").style.transform = "translate3d(0, -100%, 0)";
+  //       document.getElementById("mainNav").style.transform = "translate3d(0, -100%, 0)";
   
-        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+  //       if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
   
-          document.getElementById("mainNav").style.position = "sticky";
-          document.getElementById("mainNav").style.top = "0";
-          document.getElementById("mainNav").style.zIndex = "1024";
-          document.getElementById("mainNav").style.transform = "unset";
-        }
+  //         document.getElementById("mainNav").style.position = "sticky";
+  //         document.getElementById("mainNav").style.top = "0";
+  //         document.getElementById("mainNav").style.zIndex = "1024";
+  //         document.getElementById("mainNav").style.transform = "unset";
+  //       }
   
-      } else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
+  //     } else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
   
-        document.getElementById("mainNav").style.transform = "unset";
+  //       document.getElementById("mainNav").style.transform = "unset";
   
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
   /*--------------------------------------------------------------------------------------------------------------------*/
   //Owl carousel
