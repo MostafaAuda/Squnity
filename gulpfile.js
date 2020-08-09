@@ -71,7 +71,7 @@ function include (cb) {
 }
 
 function pages(cb) {
-  return gulp.src('app/!(layout)', 'app/**/*.html')
+  return gulp.src('app/pages/*.html')
   .pipe(fileinclude({
     prefix: '@@',
     basepath: '@file'
@@ -91,7 +91,7 @@ function watch(cb) {
   gulp.watch('app/css/*.scss', css);
   gulp.watch('app/js/*.js', js).on('change', browserSync.reload);
   gulp.watch('app/assets/**/*', gulp.series(cleanassets, images));
-  gulp.watch('app/*.html', pages).on('change', browserSync.reload);
+  gulp.watch('app/pages/*.html', pages).on('change', browserSync.reload);
   cb();
 }
 

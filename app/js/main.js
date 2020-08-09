@@ -38,35 +38,7 @@ $(document).ready(function() {
     .start();
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-
-  // window.onscroll = function() {scrollFunction()};
-
-  // function scrollFunction() {
-
-  //   if (window.innerWidth > 1024) {
-      
-  //     if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-
-  //       document.getElementById("mainNav").style.transform = "translate3d(0, -100%, 0)";
-  
-  //       if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-  
-  //         document.getElementById("mainNav").style.position = "sticky";
-  //         document.getElementById("mainNav").style.top = "0";
-  //         document.getElementById("mainNav").style.zIndex = "1024";
-  //         document.getElementById("mainNav").style.transform = "unset";
-  //       }
-  
-  //     } else if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
-  
-  //       document.getElementById("mainNav").style.transform = "unset";
-  
-  //     }
-  //   }
-  // }
-
-  /*--------------------------------------------------------------------------------------------------------------------*/
-  //Owl carousel
+//Owl carousel
 
   $('.owl-carousel').owlCarousel({
     loop:true,
@@ -88,49 +60,40 @@ $(document).ready(function() {
     }
   })
 
-  /*--------------------------------------------------------------------------------------------------------------------*/
-  //Year Function
+/*--------------------------------------------------------------------------------------------------------------------*/
+//Year Function
 
     var d = new Date();
     var n = d.getFullYear();
     document.getElementById("getYear").innerHTML = n;
   
-  /*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
   
   $("#back2Top").click(function(event) {
       event.preventDefault();
       $("html, body").animate({ scrollTop: 0 }, "slow");
       return false;
   });
-  /*Scroll to top when arrow up clicked END*/
 
-  /*--------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+//Scroll to position animation
 
-  //Scroll to position animation
-  $('a[href*="#"]').on('click', function(e) {
-    e.preventDefault()
-    
-    if (window.innerWidth > 1024) {
-      $('html, body').animate(
-        {
-        scrollTop: $($(this).attr('href')).offset().top - 60,
-        },
-        1000,
-        'linear'
-      )
-    } else {
-      $('html, body').animate(
-        {
-        scrollTop: $($(this).attr('href')).offset().top,
-        },
-        1000,
-        'linear'
-      )
+  $(function() {
+    $("a[href*='#']:not([href='#'])").click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 60
+        }, 1000);
+        return false;
+      }
     }
-
-
-
   });
+  });
+
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 });
 
