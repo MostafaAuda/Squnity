@@ -5,10 +5,10 @@ const gulp = require('gulp'),
       cleanCSS = require('gulp-clean-css'),
       cache = require('gulp-cache'),
       imagemin = require('gulp-imagemin'),
-      tinypng = require('gulp-tinypng-compress'),
       terser = require('gulp-terser-js'),
       clean = require('gulp-clean'),
-      browserSync = require('browser-sync').create();
+      browserSync = require('browser-sync').create(),
+      fileinclude = require('gulp-file-include');
 
       const { series, parallel } = require('gulp');
       sass.compiler = require('node-sass');
@@ -60,8 +60,22 @@ function images(cb) {
   cb();
 }
 
+function include (cb) {
+  return gulp.src(['app/index.html'])
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
+  .pipe(gulp.dest('dist/'));
+  cb();
+}
+
 function pages(cb) {
-  return gulp.src('app/*.html')
+  return gulp.src('app/!(layout)', 'app/**/*.html')
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file'
+  }))
   .pipe(gulp.dest('dist/'));
   cb();
 }
@@ -87,6 +101,7 @@ exports.cleanassets = cleanassets;
 exports.clearcache = clearcache;
 exports.images = images;
 exports.pages = pages;
+exports.include = include;
 exports.watch = watch;
 
 exports.default = series(clear, parallel(css, js, images, pages), watch);
