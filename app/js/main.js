@@ -1,41 +1,35 @@
-/*Scroll to top when arrow up clicked BEGIN*/
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 700) {
-    $('#back2Top').slideDown();
-  } else {
-    $('#back2Top').slideUp();
-  }
-});
-
 $(document).ready(function() {
 
-  let app = document.getElementById('header__text--typing');
+  if (window.location.pathname == '/index.html') {
+    
+    let app = document.getElementById('header__text--typing');
 
-  let typewriter = new Typewriter(app, {
-      autoStart: true,
-      delay: 50,
-      loop: true,
-  });
-  
-  typewriter.typeString('risk management.')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('attacks mitigation.')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('security training.')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('more professional.')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('penetration testing.')
-    .pauseFor(2000)
-    .deleteAll()
-    .typeString('attacks simulation.')
-    .pauseFor(2000)
-    .deleteAll()
-    .start();
+    let typewriter = new Typewriter(app, {
+        autoStart: true,
+        delay: 50,
+        loop: true,
+    });
+    
+    typewriter.typeString('risk management.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('attacks mitigation.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('security training.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('more professional.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('penetration testing.')
+      .pauseFor(2000)
+      .deleteAll()
+      .typeString('attacks simulation.')
+      .pauseFor(2000)
+      .deleteAll()
+      .start();
+  } 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 //Owl carousel
@@ -63,12 +57,21 @@ $(document).ready(function() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 //Year Function
 
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("getYear").innerHTML = n;
-  
+  var d = new Date();
+  var n = d.getFullYear();
+  document.getElementById("getYear").innerHTML = n;
+
 /*--------------------------------------------------------------------------------------------------------------------*/
-  
+/*Scroll to top when arrow up clicked BEGIN*/
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 700) {
+      $('#back2Top').slideDown();
+    } else {
+      $('#back2Top').slideUp();
+    }
+  });
+
   $("#back2Top").click(function(event) {
       event.preventDefault();
       $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -80,17 +83,24 @@ $(document).ready(function() {
 
   $(function() {
     $("a[href*='#']:not([href='#'])").click(function() {
+
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 60
-        }, 1000);
-        return false;
+
+        var target = $(this.hash);
+
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+        if (target.length) {
+
+          $('html,body').animate({
+
+            scrollTop: target.offset().top - 60
+          }, 1000);
+
+          return false;
+        }
       }
-    }
-  });
+    });
   });
 
 /*--------------------------------------------------------------------------------------------------------------------*/

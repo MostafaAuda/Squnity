@@ -41,6 +41,7 @@ html, body {
     margin: 0;
     color: $lighterblue;
     font-weight: 400;
+    line-height: 1.7!important;
 }
 
 *:focus {
@@ -63,18 +64,19 @@ a {
   color: $lighterblue;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.7!important;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 //NavBar Styles
-
-// #mainNav {
-//   transition: 0.3s ease;
-// }
 
 nav {
 
   background: white;
   top: 0;
   z-index: 100;
+  position: sticky!important;
 
   .navbar-brand {
     img {
@@ -197,8 +199,8 @@ nav {
   }
 
   .service-icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     margin-inline-end: 10px;
   }
 
@@ -236,24 +238,27 @@ nav {
       transition: all 0.3s ease-in-out;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
       border-top: 2px solid $red!important;
-      transform: translateX(-585px);
+      transform: translateX(-670px);
       min-width: 900px;
     }
   
     .dropdown:hover .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-585px);
+      transform: translate(-670px);
     }
     
     .show > .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-585px);
+      transform: translate(-670px);
     }
   }
   
   @media only screen and (max-width: 1024px) {
+
+    position: unset!important;
+
     .sq-btn {
       margin: 7px auto;
     }
@@ -292,8 +297,8 @@ nav {
     }
 
     .service-icon {
-      width: 85px;
-      height: 85px;
+      width: 65px;
+      height: 65px;
     }
 
     .service-title {
@@ -473,7 +478,6 @@ header {
     text-align: center;
     font-size: 28px;
     margin-bottom: 50px;
-    line-height: 1.5;
     font-weight: 400;
   }
 
@@ -644,7 +648,6 @@ header {
     text-align: center;
     font-size: 16px;
     margin-bottom: 100px;
-    line-height: 1.5;
     font-weight: 400;
   }
 
@@ -683,7 +686,6 @@ header {
 
   .service__content {
     font-size: 16px;
-    line-height: 1.7;
     margin-bottom: 0;
   }
 
@@ -796,7 +798,6 @@ header {
     text-align: center;
     font-size: 16px;
     margin-bottom: 60px;
-    line-height: 1.5;
     font-weight: 400;
   }
 
@@ -930,7 +931,6 @@ header {
     text-align: center;
     font-size: 16px;
     margin-bottom: 60px;
-    line-height: 1.5;
     font-weight: 400;
   }
 
@@ -1100,6 +1100,7 @@ header {
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 //Footer Styles
+
 footer {
 
   position: relative;
@@ -1240,10 +1241,181 @@ footer {
   opacity: 1;
 }
 
+/*--------------------------------------------------------------------------------------------------------------------*/
+//Service Page styles
 
+.service-details {
+
+  padding: 30px 0;
+
+  .service-details__feature-title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .service-details__feature-container {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .service-details__feature {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .service-details__feature:not(:last-child)::after {
+    position: absolute;
+    bottom: -28px;
+    left: 12px;
+    height: 100%;
+    border-left: 2px dashed #e7eaf3;
+    content: "";
+  }
+
+  .service-details__tick {
+    color: $red;
+    font-size: 28px;
+    margin-inline-end: 15px;
+  }
+
+  .service-details__desc {
+    border: 1px solid #e7eaf3;
+    padding: 15px 30px;
+    min-height: 600px;
+    transition: box-shadow 0.3s, border 0.3s;
+  }
+
+  .service-details__desc:hover {
+    box-shadow: 0 .5rem 1rem rgba(196, 35, 52,0.3)!important;
+    border: 1px solid $red;
+  }
+
+  .service-details__desc-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .service-details__desc-info {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .service-details__title--firstly {
+    margin: auto;
+    color: #00c9a7;
+    background: rgba(0, 201, 167, 0.1);
+    border-radius: 6.1875rem;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: fit-content;
+    font-weight: 400;
+  }
+
+  .service-details__title--secondary {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .service-details__card {
+    border: 1px solid #e7eaf3;
+    padding: 15px;
+    transition: box-shadow 0.3s, border 0.3s;
+    margin-bottom: 30px;
+  }
+
+  .service-details__card:hover {
+    box-shadow: 0 .5rem 1rem rgba(196, 35, 52,0.3)!important;
+    border: 1px solid $red;
+  }
+
+  .service-details__card-figure {
+    font-size: 60px;
+    color: $red;
+    margin-inline-end: 15px;
+  }
+
+  .service-details__card-info {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+    .service-details__desc {
+      min-height: unset;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+
+    .service-details__feature-title {
+      font-size: 14px;
+    }
+  
+    .service-details__feature-container {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .service-details__feature:not(:last-child)::after {
+      bottom: -24px;
+      left: 9px;
+    }
+
+    .service-details__tick {
+      font-size: 20px;
+      margin-inline-end: 10px;
+    }
+
+    .service-details__desc {
+      padding: 15px;
+    }
+
+    .service-details__desc-title {
+      font-size: 16px;
+    }
+  
+    .service-details__desc-info {
+      font-size: 14px;
+    }
+
+    .service-details__title--firstly {
+      font-size: 12px;
+    }
+  
+    .service-details__title--secondary {
+      font-size: 20px;
+    }
+
+    .service-details__card-figure {
+      font-size: 35px;
+      margin-inline-end: 10px;
+    }
+  
+    .service-details__card-info {
+      font-size: 14px;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+
+  }
+
+}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-
 /* Media Queries for RTL - LTR */
 
 @media only screen and (max-width: 1024px) {
