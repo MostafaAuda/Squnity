@@ -238,20 +238,20 @@ nav {
       transition: all 0.3s ease-in-out;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
       border-top: 2px solid $red!important;
-      transform: translateX(-670px);
+      transform: translateX(-665px);
       min-width: 900px;
     }
   
     .dropdown:hover .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-670px);
+      transform: translate(-665px);
     }
     
     .show > .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-670px);
+      transform: translate(-665px);
     }
   }
   
@@ -1339,7 +1339,7 @@ footer {
   }
 
   .service-details__card-figure {
-    font-size: 60px;
+    font-size: 55px;
     color: $red;
     margin-inline-end: 15px;
   }
