@@ -653,7 +653,7 @@ header {
 
   .services__service {
     position: relative;
-    height: 260px;
+    height: 360px;
     margin-bottom: 60px;
   }
 
@@ -669,7 +669,7 @@ header {
     padding: 15px;
     border-bottom-left-radius: 0px!important;
     border-bottom-right-radius: 0px!important;
-    height: 200px;
+    min-height: 300px;
   }
 
   .service__title {
@@ -678,6 +678,7 @@ header {
     margin-bottom: 20px;
     font-weight: 600;
     transition: all 0.3s;
+    width: 70%;
   }
 
   .service__title--color {
