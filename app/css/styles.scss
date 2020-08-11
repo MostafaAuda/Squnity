@@ -653,7 +653,6 @@ header {
 
   .services__service {
     position: relative;
-    // height: 360px;
     margin-bottom: 70px;
   }
 
@@ -717,13 +716,6 @@ header {
 
   @media only screen and (max-width: 1024px) {
 
-    .services__service {
-      height: unset;
-    }
-
-    .service__container {
-      height: unset;
-    }
   }
 
   @media only screen and (max-width: 767px) {
@@ -742,10 +734,13 @@ header {
     }
 
     .service__figure {
-      top: -15px;
-      right: 15px;
+      top: -25px;
       width: 85px;
       height: 85px;
+    }
+
+    .service__container {
+      min-height: unset;
     }
 
     .service__title {
