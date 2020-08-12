@@ -34,7 +34,26 @@ $(document).ready(function() {
 /*--------------------------------------------------------------------------------------------------------------------*/
 //Owl carousel
 
-  $('.owl-carousel').owlCarousel({
+  $('#training-slider').owlCarousel({
+    loop:true,
+    margin:20,
+    nav:false,
+    dots: true,
+    autoplay: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        767:{
+            items:3
+        },
+        1024:{
+            items:4
+        }
+    }
+  });
+
+  $('#acknowledgment-slider').owlCarousel({
     loop:true,
     margin:30,
     nav:true,
@@ -42,15 +61,15 @@ $(document).ready(function() {
     autoplay: true,
     stagePadding: 25,
     responsive:{
-        0:{
-            items:2
-        },
-        767:{
-            items:3
-        },
-        1024:{
-            items:5
-        }
+      0:{
+          items:2
+      },
+      767:{
+          items:3
+      },
+      1024:{
+          items:5
+      }
     }
   })
 

@@ -11,8 +11,8 @@
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(196,35,52,0.8); 
-    border-radius: 4px;
+  background: rgba(196,35,52,0.8); 
+  border-radius: 4px;
 }
   
 /* Handle on hover */
@@ -1243,6 +1243,8 @@ footer {
 .service-details {
 
   padding: 30px 0;
+  position: relative;
+  overflow: hidden;
 
   .service-details__feature-title {
     margin-bottom: 15px;
@@ -1412,6 +1414,171 @@ footer {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//Service Page styles
+
+.training-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.training-details {
+
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0;
+
+
+  .owl-nav {
+    margin-bottom: 0;
+  }
+
+  .owl-prev, .owl-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;  
+    font-size: 45px!important;
+  }
+
+  .owl-prev {
+    left: 15px;
+  }
+
+  .owl-next {
+    right: 15px;
+  }
+
+  .owl-theme .owl-nav [class*=owl-] {
+    margin: 0;
+    color: $red;
+    border: none!important;
+    transition: font-size 0.3s;
+  }
+
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent;
+    outline: unset;
+    font-size: 55px!important;
+  }
+
+  .owl-theme .owl-nav [class*=owl-]:focus {
+    outline: unset;
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $red;
+  } 
+
+  .training-details__course-container {
+    position: relative;
+    padding: 10px;
+    margin: 15px 5px;
+    min-height: 320px;
+  }
+
+  .training-details__course-title {
+    font-size: 16px;
+    color: #c42334;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  .training-details__course-info {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .training-details__course-wave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .training-details__course-status {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+    padding: 3px 15px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    color: $red;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .training-details__course-desc {
+    font-size: 16px;
+    color: #c42334;
+    margin-bottom: 5px;
+  }
+
+  .table {
+    color: $lighterblue;
+    text-align: center;
+  }
+
+  .table td, .table th {
+    font-weight: 400;
+    font-size: 16px;
+  }   
+
+  .table-status {
+    color: white;
+    font-weight: 500;
+  }
+
+  .table .thead-dark th {
+    background-color: $blue;
+    border-color: $blue;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+
+    .owl-prev, .owl-next {
+      font-size: 40px!important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      width: 7px;
+      height: 7px;
+    }
+
+    .training-details__course-title {
+      font-size: 14px;
+    }
+  
+    .training-details__course-info {
+      font-size: 14px;
+    }
+  
+    .training-details__course-status {
+      top: 28px;
+      font-size: 14px;
+    }
+  
+    .training-details__course-desc {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+  }
+  
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
 /* Media Queries for RTL - LTR */
 
 @media only screen and (max-width: 1024px) {
@@ -1419,6 +1586,10 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
 
   .section-padding {
     padding: 30px 0;
@@ -1431,6 +1602,10 @@ footer {
     font-size: 14px;
     text-align: center;
   }
+
+  .training-title {
+    font-size: 19px;
+  } 
 }
 
 @media only screen and (max-width: 320px) {
