@@ -45,10 +45,13 @@ $(document).ready(function() {
             items:1
         },
         767:{
-            items:3
+            items:2
         },
         1024:{
-            items:4
+            items:3
+        },
+        1025:{
+          items:4
         }
     }
   });

@@ -1473,20 +1473,6 @@ footer {
     position: relative;
     padding: 10px;
     margin: 15px 5px;
-    min-height: 320px;
-  }
-
-  .training-details__course-title {
-    font-size: 16px;
-    color: #c42334;
-    margin-top: 17%;
-    margin-bottom: 0;
-    font-weight: 500;
-  }
-
-  .training-details__course-info {
-    font-size: 16px;
-    margin-bottom: 15px;
   }
 
   .training-details__course-wave {
@@ -1510,10 +1496,45 @@ footer {
     font-size: 16px;
   }
 
+  .training-details__course-title {
+    font-size: 16px;
+    color: #c42334;
+    margin-top: 17%;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  .training-details__course-info {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
   .training-details__course-desc {
     font-size: 16px;
     color: #c42334;
     margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .training-details__course-description {
+    font-size: 16px;
+    margin-bottom: 0;
+    min-height: 200px;
+  }
+
+  .training-details__course-details {
+    display: block;
+    background-color: $red;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    border-color: #c42334!important;
+    padding: 5px 25px;
+    margin-top: 15px;
+  }
+
+  .training-details__course-details:hover {
+    box-shadow: 0 0 6px 0 #c42334;
   }
 
   .table {
@@ -1535,6 +1556,7 @@ footer {
     background-color: $blue;
     border-color: $blue;
   }
+
 
 
   @media only screen and (max-width: 1024px) {
@@ -1567,6 +1589,10 @@ footer {
     .training-details__course-desc {
       font-size: 14px;
     }
+
+    .training-details__course-description {
+      font-size: 14px;
+    }
   }
   
   @media only screen and (max-width: 320px) {
@@ -1575,8 +1601,147 @@ footer {
   
 }
 
+/*--------------------------------------------------------------------------------------------------------------------*/
+//Course Modal styles
+
+.modal-lg {
+  max-width: 1110px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.course-title {
+  color: #c42334;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.course-desc {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.course-objective {
+  margin-bottom: 30px;
+} 
+
+.course-objective li{
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.course-content-module {
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.course-content-session {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.course-content-duration {
+  font-weight: 600;
+}
+
+.course-info-figure {
+  color: $red;
+  font-size: 28px;
+  margin-right: 10px;
+  width: 28px;
+  text-align: center;
+}
+
+.course-info {
+  font-size: 20px;
+  font-weight: 500;
+  vertical-align: text-bottom;
+}
+
+.course-enroll {
+  background-color: $red;
+  color: white!important;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.course-enroll:hover {
+  box-shadow: 0 0 6px 0 #c42334;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  .modal-lg {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .modal-lg {
+    max-width: 100%;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+  
+  .course-title {
+    font-size: 16px;
+  }
+  
+  .course-desc {
+    font-size: 14px;
+  }
+
+  .course-objective li{
+    font-size: 14px;
+  }
+  
+  .course-content-module {
+    font-size: 16px;
+  }
+  
+  .course-content-session {
+    font-size: 14px;
+  }
+
+  .course-content-duration {
+    margin-inline-start: 15px;
+  }
+
+  .course-enroll-info {
+    margin-top: 30px;
+  }
+  
+  .course-info-figure {
+    color: $red;
+    font-size: 22px;
+    margin-right: 10px;
+    width: 22px;
+  }
+  
+  .course-info {
+    font-size: 16px;
+  }
+  
+  .course-enroll {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+
 
 /* Media Queries for RTL - LTR */
 
