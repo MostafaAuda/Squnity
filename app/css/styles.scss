@@ -704,12 +704,7 @@ header {
   .right-arrow {
     transition: transform 0.3s;
   }
-
-  // .services__service:hover .service__info {
-  //   padding: 15px 0;
-  //   box-shadow: 0 .125rem .25rem $red;
-  // }
-    
+   
   .service__info:hover .right-arrow {
     transform: translateX(10px);
   }
@@ -1428,7 +1423,6 @@ footer {
   overflow: hidden;
   padding: 30px 0;
 
-
   .owl-nav {
     margin-bottom: 0;
   }
@@ -1468,11 +1462,24 @@ footer {
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: $red;
   } 
+  
+  .owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .owl-item{
+    display: flex;
+    height: auto;
+  }
 
   .training-details__course-container {
     position: relative;
-    padding: 10px;
     margin: 15px 5px;
+  }
+
+  .training-details__course-info-container {
+    padding: 10px 10px 65px;
   }
 
   .training-details__course-wave {
@@ -1480,6 +1487,26 @@ footer {
     top: 0;
     right: 0;
     left: 0;
+  }
+
+  .training-detailss__course-thumb {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 220px;
+    }
+  }
+
+  .training-detailss__course-thumb::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(196,35,52,0.3); 
+    z-index: 1;
   }
 
   .training-details__course-status {
@@ -1499,7 +1526,7 @@ footer {
   .training-details__course-title {
     font-size: 16px;
     color: #c42334;
-    margin-top: 17%;
+    margin-top: 5px;
     margin-bottom: 0;
     font-weight: 500;
   }
@@ -1519,18 +1546,20 @@ footer {
   .training-details__course-description {
     font-size: 16px;
     margin-bottom: 0;
-    min-height: 200px;
   }
 
   .training-details__course-details {
-    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
     background-color: $red;
     color: white;
     font-weight: 500;
     font-size: 16px;
     border-color: #c42334!important;
     padding: 5px 25px;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   .training-details__course-details:hover {
@@ -1560,7 +1589,12 @@ footer {
 
 
   @media only screen and (max-width: 1024px) {
-
+    .training-detailss__course-thumb {
+  
+      img {
+        height: 200px;
+      }
+    }
   }
   
   @media only screen and (max-width: 767px) {
@@ -1572,6 +1606,13 @@ footer {
     .owl-theme .owl-dots .owl-dot span {
       width: 7px;
       height: 7px;
+    }
+
+    .training-detailss__course-thumb {
+  
+      img {
+        height: 180px;
+      }
     }
 
     .training-details__course-title {
@@ -1608,9 +1649,33 @@ footer {
   max-width: 1110px;
 }
 
+.modal-body {
+  padding: 0 15px 15px;
+}
+
 .modal-title {
   font-size: 20px;
   font-weight: 500;
+}
+
+.course-figure {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.course-figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(196,35,52,0.3); 
+  z-index: 1;
 }
 
 .course-title {
@@ -1629,7 +1694,7 @@ footer {
   margin-bottom: 30px;
 } 
 
-.course-objective li{
+.course-objective li {
   font-size: 16px;
   margin: 5px 0;
 }
@@ -1681,11 +1746,25 @@ footer {
   .modal-lg {
     max-width: 90%;
   }
+
+  .course-figure {
+  
+    img {
+      height: 350px;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .modal-lg {
     max-width: 100%;
+  }
+
+  .course-figure {
+  
+    img {
+      height: 200px;
+    }
   }
 
   .modal-title {

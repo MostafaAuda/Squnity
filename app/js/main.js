@@ -41,18 +41,15 @@ $(document).ready(function() {
     dots: true,
     autoplay: false,
     responsive:{
-        0:{
-            items:1
-        },
-        767:{
-            items:2
-        },
-        1024:{
-            items:3
-        },
-        1025:{
-          items:4
-        }
+      0:{
+          items:1
+      },
+      767:{
+          items:2
+      },
+      1024:{
+          items:3
+      }
     }
   });
 
