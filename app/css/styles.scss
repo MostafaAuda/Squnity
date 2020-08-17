@@ -1747,6 +1747,10 @@ footer {
     max-width: 90%;
   }
 
+  .modal-content {
+    margin-bottom: 100%;
+  }   
+
   .course-figure {
   
     img {
@@ -1758,6 +1762,10 @@ footer {
 @media only screen and (max-width: 767px) {
   .modal-lg {
     max-width: 100%;
+  }
+
+  .modal-content {
+    margin-bottom: unset;
   }
 
   .course-figure {
