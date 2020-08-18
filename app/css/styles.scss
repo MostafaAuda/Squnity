@@ -1478,6 +1478,10 @@ footer {
     margin: 15px 5px;
   }
 
+  .training-details__course-container:hover {
+    box-shadow: 0 .125rem .25rem rgba(196,35,52,.5)!important;
+  }
+
   .training-details__course-info-container {
     padding: 10px 10px 65px;
   }
@@ -1663,7 +1667,7 @@ footer {
 
   img {
     width: 100%;
-    height: 500px;
+    height: auto;
   }
 }
 
@@ -1715,6 +1719,10 @@ footer {
   font-weight: 600;
 }
 
+.course-enroll-info {
+  margin-top: 30px;
+}
+
 .course-info-figure {
   color: $red;
   font-size: 28px;
@@ -1751,12 +1759,6 @@ footer {
     margin-bottom: 100%;
   }   
 
-  .course-figure {
-  
-    img {
-      height: 350px;
-    }
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1766,13 +1768,6 @@ footer {
 
   .modal-content {
     margin-bottom: unset;
-  }
-
-  .course-figure {
-  
-    img {
-      height: 200px;
-    }
   }
 
   .modal-title {
@@ -1801,10 +1796,6 @@ footer {
 
   .course-content-duration {
     margin-inline-start: 15px;
-  }
-
-  .course-enroll-info {
-    margin-top: 30px;
   }
   
   .course-info-figure {
