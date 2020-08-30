@@ -26,11 +26,8 @@
 
 $red: #c42334;
 $lightred: #c93848;
-// $petrol: 	#0c2c34;
-// $lightpetrol: #244148;
-// $lighterpetrol: #3c565c;
 $blue: #0c2434;
-$lightblue: #243948;
+$lightblue: #77838f;
 $lighterblue: #3c4f5c;
 
 html, body {
@@ -135,7 +132,6 @@ nav {
     color: $lighterblue!important;
     font-size: 16px;
     transition: color 0.3s;
-    font-weight: 500;
   }
   
   .nav-link:hover {
@@ -147,7 +143,7 @@ nav {
   }
 
   .dropdown-toggle::after {
-    vertical-align: 0.2;
+    vertical-align: 3px;
 }
   
   .sq-btn {
@@ -174,6 +170,7 @@ nav {
     padding: 0;
     margin: 0;
     border-radius: unset;
+    background-clip: unset;
   }
   
   .show > .dropdown-menu {
@@ -238,20 +235,18 @@ nav {
       transition: all 0.3s ease-in-out;
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
       border-top: 2px solid $red!important;
-      transform: translateX(-665px);
+      transform: translateX(-485px);
       min-width: 900px;
     }
   
     .dropdown:hover .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-665px);
     }
     
     .show > .dropdown-menu {
       visibility: visible;
       opacity: 1;
-      transform: translate(-665px);
     }
   }
   
@@ -325,11 +320,11 @@ header {
     color: $red;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    font-size: 68px;
+    font-size: 58px;
   }
 
   .header__text--content {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0;
   }
 
@@ -491,7 +486,7 @@ header {
   .speciality__title {
     text-align: center;    
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     margin-bottom: 10px;
   }
@@ -513,7 +508,7 @@ header {
     }
   
     .speciality__title--secondary {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 30px;
     }
 
@@ -562,7 +557,7 @@ header {
 
   .importance__title {
     color: $red;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
     font-weight: 600;
   }
@@ -586,7 +581,7 @@ header {
   @media only screen and (max-width: 767px) {
 
     .importance__question {
-      font-size: 20px;
+      font-size: 18px;
     }
   
     .importance__answer {
@@ -672,7 +667,7 @@ header {
   }
 
   .service__title {
-    font-size: 20px;
+    font-size: 18px;
     color: $red;
     margin-bottom: 20px;
     font-weight: 600;
@@ -933,7 +928,7 @@ header {
   }
 
   .contact-us__info--title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
   }
@@ -1089,6 +1084,18 @@ header {
 
 }
 
+.contact-us::after {
+  content: "";
+  right: 0;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  bottom: -1px;
+  position: absolute;
+  background-color: #e7eaf3;
+  margin: auto;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 //Footer Styles
 
@@ -1112,7 +1119,6 @@ footer {
       font-size: 16px;
       transition: color 0.3s;
       cursor: pointer;
-      font-weight: 500;
 
       a {
         transition: color 0.3s;
@@ -1133,7 +1139,7 @@ footer {
     .footer__social--item {
       display: inline;
       margin-inline-start: 30px;
-      font-size: 20px;
+      font-size: 18px;
       transition: color 0.3s;
       cursor: pointer;
 
@@ -1154,6 +1160,37 @@ footer {
   .lower-footer {
     padding: 35px 0;
     background-color: $red;
+    position: relative;
+  }
+
+  .lower-footer_totop {
+    position: absolute;
+    top: -48px;
+    width: 13.125rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      transition: all 0.3s;
+    }
+
+    .fill-primary {
+      fill: $red!important;
+    }
+  }
+
+  .lower-footer_totop:hover span {
+    top: 5px;
   }
 
   .footer_copyrights {
@@ -1170,6 +1207,10 @@ footer {
         font-size: 18px;
         margin-inline-start: 20px;
       }
+    }
+
+    .lower-footer_totop {
+      display: none;
     }
   }
   
@@ -1333,8 +1374,8 @@ footer {
 
   .service-details__card-figure {
     font-size: 55px;
+    width: 80px;
     color: $red;
-    margin-inline-end: 15px;
   }
 
   .service-details__card-info {
@@ -1367,7 +1408,7 @@ footer {
     }
 
     .service-details__tick {
-      font-size: 20px;
+      font-size: 18px;
       margin-inline-end: 10px;
     }
 
@@ -1388,12 +1429,12 @@ footer {
     }
   
     .service-details__title--secondary {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .service-details__card-figure {
       font-size: 35px;
-      margin-inline-end: 10px;
+      width: 55px;
     }
   
     .service-details__card-info {
@@ -1412,7 +1453,7 @@ footer {
 //Service Page styles
 
 .training-title {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 25px;
 }
@@ -1638,6 +1679,14 @@ footer {
     .training-details__course-description {
       font-size: 14px;
     }
+
+    .training-details__course-details {
+      font-size: 14px;
+    }
+
+    .table td, .table th {
+      font-size: 14px;
+    } 
   }
   
   @media only screen and (max-width: 320px) {
@@ -1658,7 +1707,7 @@ footer {
 }
 
 .modal-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -1684,7 +1733,7 @@ footer {
 
 .course-title {
   color: #c42334;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -1704,7 +1753,7 @@ footer {
 }
 
 .course-content-module {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 0;
   font-weight: 600;
   margin-top: 20px;
@@ -1732,7 +1781,7 @@ footer {
 }
 
 .course-info {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   vertical-align: text-bottom;
 }
@@ -1741,7 +1790,7 @@ footer {
   background-color: $red;
   color: white!important;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .course-enroll:hover {
@@ -1819,6 +1868,98 @@ footer {
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+//Coming Soon Page styles
+
+.coming-soon {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background:
+  /*Transparent block see through overlay*/
+  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.9)),url(../assets/images/coming-soon.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .logo-container {
+
+    margin-top: 150px;
+
+    img {
+      width: 125px;
+      height: auto;
+      margin-inline-end: 15px;
+    }
+  
+    span {
+      color: white;
+      font-size: 88px;
+      font-weight: 600;
+    }
+  }
+
+  .coming-info {
+    color: white;
+    font-size: 28px;
+    margin-top: 35px;
+  }
+
+  .to-home {
+    margin: auto;
+    background-color: $red;
+    font-size: 16px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .to-home:hover {
+    box-shadow: 0 0 10px 0 #c42334;
+  }
+
+
+  @media only screen and (max-width: 1024px) {
+
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .logo-container {
+
+      margin-top: 120px;
+  
+      img {
+        width: 50px;
+        margin-inline-end: 5px;
+      }
+    
+      span {
+        font-size: 42px;
+      }
+    }
+
+    .coming-info {
+      font-size: 16px;
+      margin-top: 35px;
+    }
+
+    .to-home {
+      font-size: 14px;
+      padding: 5px 15px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+  
+  }
+
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+
 
 
 /* Media Queries for RTL - LTR */
@@ -1846,7 +1987,7 @@ footer {
   }
 
   .training-title {
-    font-size: 19px;
+    font-size: 18px;
   } 
 }
 
