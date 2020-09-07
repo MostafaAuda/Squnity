@@ -993,12 +993,11 @@ header {
   .contact-us__form::after {
     content: "";
     right: -15px;
-    top: 0;
-    bottom: 0;
+    top: 50%;
     width: 1px;
     height: 80%;
-    margin: auto;
     position: absolute;
+    transform: translateY(-50%);
     background-color: #e7eaf3;
   }
 
@@ -1092,14 +1091,13 @@ header {
 
 .contact-us::after {
   content: "";
-  right: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   width: 80%;
   height: 2px;
   bottom: -1px;
   position: absolute;
   background-color: #e7eaf3;
-  margin: auto;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -1173,17 +1171,15 @@ footer {
     position: absolute;
     top: -48px;
     width: 13.125rem;
-    left: 0;
-    right: 0;
-    margin: auto;
+    left: 50%;
+    transform: translate(-50%);
     cursor: pointer;
 
     span {
       position: absolute;
       top: 10px;
-      left: 0;
-      right: 0;
-      margin: auto;
+      left: 50%;
+      transform: translate(-50%);
       text-align: center;
       color: white;
       font-size: 18px;
@@ -1602,15 +1598,14 @@ footer {
   .training-details__course-details {
     position: absolute;
     bottom: 15px;
-    right: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
     background-color: $red;
     color: white;
     font-weight: 500;
     font-size: 16px;
     border-color: #c42334!important;
     padding: 5px 25px;
-    margin: auto;
 
     a {
       color: white;
@@ -1796,7 +1791,7 @@ footer {
 
   .course-instructor-picture {
     width: 130px;
-    height: auto;
+    height: 190px;
   }
 
   .course-instructor-name {
@@ -1816,8 +1811,8 @@ footer {
   }
 
   .certificate-picture {
-    width: 200px;
-    height: auto;
+    width: 190px;
+    height: 130px;
   }
 
   .certificate-name {
